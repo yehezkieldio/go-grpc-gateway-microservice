@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package grpc.helloworld.v1;
+
+option go_package = "github.com/yehezkieldio/go-grpc-gateway-microservice/gen";
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloResponse) {
+  }
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string message = 1;
+}
